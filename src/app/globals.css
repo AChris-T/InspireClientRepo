@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.robot{
+    font-family: "Roboto Mono", monospace;
+}
+.robbot{
+    font-family: "Roboto", sans-serif;
+
+}
+@theme {
+    --color-lightPurple-100: #2C3E50;
+    --color-black-100: #515151;
+    --color-blue-100: #0057FF;
+    --color-black-200: #2C3E5099;
+    --color-gray-100: #707070;
+    --color-black-500: #f4f4f4;
+}
+
+
