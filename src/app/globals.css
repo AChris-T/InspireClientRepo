@@ -1,20 +1,56 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-.robot{
-    font-family: "Roboto Mono", monospace;
-}
-.robbot{
-    font-family: "Roboto", sans-serif;
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
 
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 @theme {
-    --color-lightPurple-100: #2C3E50;
-    --color-black-100: #515151;
-    --color-blue-100: #0057FF;
-    --color-black-200: #2C3E5099;
-    --color-gray-100: #707070;
-    --color-black-500: #f4f4f4;
+  --color-black-100: #050505;
+  --color-gray-100: #0f0c1724;
+  --color-yellow-100: #dcfc36;
+}
+.sora {
+  font-family: 'Sora', sans-serif;
+}
+.space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.pat {
+  background-image: url('../../public/images/pattern.png');
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: -100px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
+.rotate-circle {
+  animation: spin 20s linear infinite;
+  border-style: dashed; /* makes rotation visually obvious */
+  border-width: 1px;
+  border-color: #cac6dd;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
+.scrolling-track {
+  animation: scroll-left 20s linear infinite;
+}
