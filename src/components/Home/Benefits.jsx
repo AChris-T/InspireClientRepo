@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import edge from '../../../public/images/Bar.png';
 import user from '../../../public/images/plug.png';
-import refresh from '../../../public/images/refresh.png';
+import refresh from '../../../public/images/Refresh.png';
 import frame from '../../../public/images/Frame.png';
 import framechat from '../../../public/images/FrameChat.png';
 import frametools from '../../../public/images/Frametools.png';
