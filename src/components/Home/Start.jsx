@@ -33,7 +33,7 @@ export default function Start() {
             placeholder="Platform"
             className="border-[#FFFFFF14] py-4 px-3 rounded-2xl border-[1px] w-full"
           />
-          <button className="flex md:hidden bg-yellow-100 mt-[40px] gap-2 rounded-full px-4 text-black-100  cursor-pointer items-center h-[48px] font-medium text-sm group">
+          <button className="flex md:hidden bg-yellow-100 mt-[40px] gap-2 rounded-full px-4 text-black-100 justify-center  cursor-pointer items-center h-[48px] font-medium text-sm group">
             Start your free trial
             <div className="bg-black-100 text-yellow-100 p-3 rounded-full transform rotate-[-40deg] transition-transform duration-300 group-hover:rotate-0">
               <FaArrowRight />
