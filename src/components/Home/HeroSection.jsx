@@ -38,7 +38,7 @@ export default function HeroSection() {
       <div className="mt-[40px] flex flex-col items-center gap-10 w-full text-center">
         <div className="w-full hidden lg:flex">
           <div
-            className="absolute flex justify-end items-end flex-col top-36 left-42 transition-transform duration-300 ease-out hover:scale-110"
+            className="absolute z-80 flex justify-end items-end flex-col top-36 left-42 transition-transform duration-300 ease-out hover:scale-110"
             style={{ transform: calculateTransform(0, 0) }}
           >
             <Arrow className="transition-all duration-300 hover:opacity-80" />
@@ -47,7 +47,7 @@ export default function HeroSection() {
             </h3>
           </div>
           <div
-            className="absolute flex  items-start flex-col top-36 right-42 transition-transform duration-300 ease-out hover:scale-110"
+            className="absolute z-80 flex  items-start flex-col top-36 right-42 transition-transform duration-300 ease-out hover:scale-110"
             style={{ transform: calculateTransform(0, 0) }}
           >
             <ArrowLeft className="transition-all duration-300 hover:opacity-80" />
@@ -59,19 +59,19 @@ export default function HeroSection() {
             </h3>
           </div>
           <div
-            className="absolute top-[350px] flex flex-col items-end left-28 transition-transform duration-300 ease-out hover:scale-110"
+            className="absolute z-80 top-[350px] flex flex-col items-end left-28 transition-transform duration-300 ease-out hover:scale-110"
             style={{ transform: calculateTransform(0, 0) }}
           >
             <Arrow className="transition-all duration-300 hover:opacity-80" />
             <h3
-              className="mr-3 border-[#1F1F1F] z-80 rounded-lg font-medium text-[13px] border-[0.5px] p-2 
+              className="mr-3 border-[#1F1F1F] z-100 rounded-lg font-medium text-[13px] border-[0.5px] p-2 
                           transition-all duration-300 hover:bg-yellow-100 hover:text-black"
             >
               Smartflow recovery
             </h3>
           </div>
           <div
-            className="absolute top-[300px] right-28 transition-transform duration-300 ease-out hover:scale-110"
+            className="absolute  z-80 top-[300px] right-28 transition-transform duration-300 ease-out hover:scale-110"
             style={{ transform: calculateTransform(0, 0) }}
           >
             <ArrowLeft className="transition-all duration-300 hover:opacity-80" />

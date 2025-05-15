@@ -19,7 +19,7 @@ export default function Benefits() {
       </h3>
       <div className="flex flex-col ">
         <div className="grid  grid-cols-1 md:grid-cols-3 ">
-          <div className="border-[#1C1C21] border-l-[1px] border-y-[1px] flex flex-col gap-8 rounded-l-2xl px-6 py-5">
+          <div className="border-[#1C1C21] border-l-[1px] border-y-[1px] flex flex-col gap-8 rounded-tl-lg-2xl px-6 py-5">
             <Image
               src={edge}
               alt=""
@@ -47,7 +47,7 @@ export default function Benefits() {
               </p>
             </div>
           </div>
-          <div className="border-[#1C1C21] border-r-[1px] border-y-[1px] flex flex-col gap-8 rounded-r-2xl px-6 py-5">
+          <div className="border-[#1C1C21] border-r-[1px] border-y-[1px] flex flex-col gap-8 rounded-tr-2xl px-6 py-5">
             <Image
               src={refresh}
               alt=""
@@ -65,7 +65,7 @@ export default function Benefits() {
           </div>
         </div>
         <div className="grid gap-2 grid-cols-1 md:grid-cols-2 w-full">
-          <div className="border-[#1C1C21]  border-y-[1px] flex flex-col gap-8  px-6 py-5">
+          <div className="border-[#1C1C21]  border-b-[1px] flex flex-col gap-8  px-6 py-5">
             <Image
               src={guild}
               alt=""
@@ -80,7 +80,7 @@ export default function Benefits() {
               </p>
             </div>
           </div>
-          <div className="border-[#1C1C21] border-l-[1px] border-y-[1px] flex flex-col gap-8  px-6 py-5">
+          <div className="border-[#1C1C21] border-l-[1px] border-b-[1px] flex flex-col gap-8  px-6 py-5">
             <Image
               src={recov}
               alt=""

@@ -6,6 +6,10 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+.bd {
+  border: 0.3px solid;
+  border: linear-gradient(180deg, #2f2f37 27.85%, rgba(47, 47, 55, 0) 100%);
+}
 
 @theme {
   --color-black-100: #050505;
@@ -24,6 +28,13 @@ body {
   width: 100%;
   background-size: cover;
   background-position: -100px;
+}
+.yearly {
+  background: linear-gradient(
+    137.34deg,
+    rgba(6, 6, 6, 0.16) 23.98%,
+    rgba(112, 113, 122, 0.16) 65.73%
+  );
 }
 @keyframes spin {
   0% {
