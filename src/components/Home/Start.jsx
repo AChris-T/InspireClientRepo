@@ -8,7 +8,7 @@ export default function Start() {
         <h3 className="text-2xl uppercase md:text-[48px] text-[#CACACE]">
           Start Recovering revenue today{' '}
         </h3>
-        <button className="bg-yellow-100 mt-[40px] gap-2 rounded-full px-4 text-black-100 flex cursor-pointer items-center h-[48px] font-medium text-sm group">
+        <button className="hidden md:flex bg-yellow-100 mt-[40px] gap-2 rounded-full px-4 text-black-100  cursor-pointer items-center h-[48px] font-medium text-sm group">
           Start your free trial
           <div className="bg-black-100 text-yellow-100 p-3 rounded-full transform rotate-[-40deg] transition-transform duration-300 group-hover:rotate-0">
             <FaArrowRight />
@@ -16,7 +16,7 @@ export default function Start() {
         </button>
       </div>
       <div className="w-full flex items-center justify-center ">
-        <form className="w-full flex gap-4 flex-col  px-10">
+        <form className="w-full flex gap-4 flex-col  md:px-10">
           <input
             placeholder="First name"
             className="border-[#FFFFFF14] py-4 px-3 rounded-2xl border-[1px] w-full"
@@ -33,6 +33,12 @@ export default function Start() {
             placeholder="Platform"
             className="border-[#FFFFFF14] py-4 px-3 rounded-2xl border-[1px] w-full"
           />
+          <button className="flex md:hidden bg-yellow-100 mt-[40px] gap-2 rounded-full px-4 text-black-100  cursor-pointer items-center h-[48px] font-medium text-sm group">
+            Start your free trial
+            <div className="bg-black-100 text-yellow-100 p-3 rounded-full transform rotate-[-40deg] transition-transform duration-300 group-hover:rotate-0">
+              <FaArrowRight />
+            </div>
+          </button>
         </form>
       </div>
     </div>
