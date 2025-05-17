@@ -1,4 +1,5 @@
 import Benefits from '@/components/Home/Benefits';
+import Blog from '@/components/Home/Blog';
 import FAQ from '@/components/Home/FAQ';
 import Footer from '@/components/Home/Footer';
 import HeroSection from '@/components/Home/HeroSection';
@@ -19,6 +20,7 @@ export default function page() {
       <Solutions />
       <Benefits />
       <Pricing />
+      <Blog />
       <Testimonials />
       <FAQ />
       <Start />
