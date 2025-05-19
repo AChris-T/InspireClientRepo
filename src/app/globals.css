@@ -23,12 +23,14 @@ body {
   font-family: 'Space Grotesk', sans-serif;
 }
 .pat {
-  background-image: url('../../public/images/pattern.png');
   height: 400px;
+  background-image: url('../../public/images/pattern.png');
   width: 100%;
-  background-size: cover;
-  background-position: -100px;
+  background-size: 1000px auto;
+  background-repeat: no-repeat;
+  background-position: center center; /* or just 'center' */
 }
+
 .yearly {
   background: linear-gradient(
     137.34deg,

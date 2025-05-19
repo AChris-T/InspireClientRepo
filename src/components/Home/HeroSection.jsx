@@ -42,7 +42,7 @@ export default function HeroSection() {
             style={{ transform: calculateTransform(0, 0) }}
           >
             <Arrow className="transition-all duration-300 hover:opacity-80" />
-            <h3 className="mr-3 border-[#1F1F1F] rounded-lg font-medium text-[13px] border-[0.5px] p-2 transition-all duration-300 hover:bg-yellow-100 hover:text-black">
+            <h3 className="mr-3 border-[#1F1F1F] rounded-lg font-medium text-[13px] border-[0.5px] p-2 transition-all duration-300  ">
               Insight engine
             </h3>
           </div>
@@ -53,7 +53,7 @@ export default function HeroSection() {
             <ArrowLeft className="transition-all duration-300 hover:opacity-80" />
             <h3
               className="mr-3 border-[#1F1F1F] z-80 rounded-lg font-medium text-[13px] border-[0.5px] p-2 
-                          transition-all duration-300 hover:bg-yellow-100 hover:text-black"
+                          transition-all duration-300  "
             >
               Recovery dashboard
             </h3>
@@ -65,7 +65,7 @@ export default function HeroSection() {
             <Arrow className="transition-all duration-300 hover:opacity-80" />
             <h3
               className="mr-3 border-[#1F1F1F] z-100 rounded-lg font-medium text-[13px] border-[0.5px] p-2 
-                          transition-all duration-300 hover:bg-yellow-100 hover:text-black"
+                          transition-all duration-300  "
             >
               Smartflow recovery
             </h3>
@@ -77,7 +77,7 @@ export default function HeroSection() {
             <ArrowLeft className="transition-all duration-300 hover:opacity-80" />
             <h3
               className="ml-3 border-[#1F1F1F] rounded-lg font-medium text-[13px] border-[0.5px] p-2 
-              transition-all duration-300 hover:bg-yellow-100 hover:text-black"
+              transition-all duration-300  "
             >
               Compliance toolkit
             </h3>
@@ -116,11 +116,11 @@ export default function HeroSection() {
 
         <div className="pat mt-[-160px] pt-[200px] flex justify-center z-0">
           <div className="mt-[30px] w-full items-center flex justify-center px-2">
-            <div className="w-full lg:w-[600px] h-[300px] bg-transparent border-[1.5px] border-[#3c3e35] rounded-2xl flex items-center justify-center">
+            <div className="w-full lg:w-[550px] h-[300px] bg-transparent border-[1.5px] border-[#3c3e35] rounded-2xl flex items-center justify-center">
               {isPlaying ? (
                 <iframe
                   className="rounded-2xl w-full h-full"
-                  src="https://www.youtube.com/embed/PL-7PVhv0UI?autoplay=1"
+                  src="https://player.vimeo.com/video/1085643440?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                   title="YouTube video"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
