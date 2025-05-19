@@ -120,8 +120,8 @@ export default function HeroSection() {
               {isPlaying ? (
                 <iframe
                   className="rounded-2xl w-full h-full"
-                  src="https://player.vimeo.com/video/1085643440?h=f068b91aac&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                  title="YouTube video"
+                  src="https://player.vimeo.com/video/1085643440?h=f068b91aac&autoplay=1&autopause=0&badge=0&player_id=0&app_id=58479"
+                  title="Vimeo video"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                 ></iframe>
