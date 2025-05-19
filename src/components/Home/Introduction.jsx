@@ -19,7 +19,7 @@ export default function Introduction() {
       </div>
       <div className="w-full ">
         <div className="mt-[30px] w-full items-center flex justify-center">
-          <div className="w-full w-[300px]  h-[300px] bg-transparent border-[1.5px] border-[#3c3e35] rounded-2xl flex items-center justify-center">
+          <div className="w-full   h-[300px] bg-transparent border-[1.5px] border-[#3c3e35] rounded-2xl flex items-center justify-center">
             {isPlaying ? (
               <iframe
                 className="rounded-2xl w-full h-full"
