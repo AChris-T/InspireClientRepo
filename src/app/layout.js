@@ -1,35 +1,83 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'InspireEdge AI - Recover More. Grow Smarter.',
+  title: 'InspireEdge AI - Smart eCommerce Growth & Cart Recovery',
   description:
-    'Turn abandoned carts into new income streams with AI-powered recovery, predictive analytics, and ethical precision.',
+    'Boost your eCommerce revenue with InspireEdge AI. Recover abandoned carts, optimize product performance, and automate growth using intelligent AI tools for Shopify, WooCommerce, Magento, and more.',
+  keywords: [
+    'eCommerce AI tools',
+    'abandoned cart recovery',
+    'Shopify cart abandonment',
+    'WooCommerce recovery',
+    'AI for online stores',
+    'smart eCommerce automation',
+    'predictive analytics',
+    'cart abandonment emails',
+    'conversion optimization',
+    'retargeting automation',
+    'AI growth tools',
+    'product performance insights',
+    'revenue optimization',
+    'online store AI',
+    'eCommerce retention tools',
+  ],
+  metadataBase: new URL('https://inspireedge.ai'),
+  alternates: {
+    canonical: 'https://inspireedge.ai',
+  },
   openGraph: {
-    title: 'InspireEdge AI',
+    title: 'InspireEdge AI - Smart eCommerce Growth',
     description:
-      'Turn abandoned carts into new income streams with AI-powered recovery.',
+      'Turn abandoned carts into revenue with InspireEdge AI. Smart automation for Shopify, WooCommerce, Magento, and custom platforms.',
     url: 'https://inspireedge.ai',
     siteName: 'InspireEdge AI',
+    locale: 'en_US',
+    type: 'website',
     images: [
       {
         url: 'https://inspireedge.ai/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'InspireEdge AI Banner',
+        alt: 'AI-driven cart recovery for eCommerce',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'InspireEdge AI',
+    title: 'InspireEdge AI - AI Tools for eCommerce Growth',
     description:
-      'Turn abandoned carts into new income streams with AI-powered recovery.',
+      'Recover lost revenue from abandoned carts with InspireEdge AI for Shopify, WooCommerce, and more.',
     images: ['https://inspireedge.ai/images/twitter-image.jpg'],
+    creator: '@inspireedge',
+    site: '@inspireedge',
   },
-  metadataBase: new URL('https://inspireedge.ai'),
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      maxVideoPreview: -1,
+      maxImagePreview: 'large',
+      maxSnippet: -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'mask-icon',
+      url: '/safari-pinned-tab.svg',
+    },
+  },
+  themeColor: '#0f172a',
+  manifest: '/site.webmanifest',
+  category: 'ecommerce',
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
