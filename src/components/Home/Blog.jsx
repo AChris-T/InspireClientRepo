@@ -76,7 +76,12 @@ export default function Blog() {
                 height={200}
                 className="w-full h-48 object-cover rounded"
               />
-              <h2 className="text-[18px] font-medium mb-2">{post.title}</h2>
+              <h2
+                className="text-[18px] font-medium mb-2"
+                dangerouslySetInnerHTML={{
+                  __html: post.title.substring(0, 70) + '...',
+                }}
+              />
               <p
                 className="text-[#878b9a] text-sm mb-3"
                 dangerouslySetInnerHTML={{
