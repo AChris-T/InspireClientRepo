@@ -4,30 +4,31 @@ import { FaChevronLeft, FaChevronRight, FaStar } from 'react-icons/fa6';
 
 const testimonials = [
   {
-    name: 'Dr. Amaka Okafor, COO, Zenith Group',
-    location: 'UK, London',
+    name: 'Sarah Thompson',
+    location: 'New York, USA',
     stars: 5,
-    text: `InspireEdge AI has revolutionized how we make decisions. It's like having a boardroom of experts—only smarter, faster, and aligned with our mission`,
+    text: `Using InspireEdge AI has been a game changer for our team. It helps us make smarter decisions without second-guessing everything.`,
   },
   {
-    name: 'Dr. Amaka Okafor, COO, Zenith Group',
-    location: 'UK, London',
+    name: 'Michael Adeyemi',
+    location: 'Lagos, Nigeria',
     stars: 5,
-    text: `InspireEdge AI has revolutionized how we make decisions. It's like having a boardroom of experts—only smarter, faster, and aligned with our mission`,
+    text: `I didn’t expect it to be this good. InspireEdge AI helped us spot patterns we would have completely missed.`,
   },
   {
-    name: 'Dr.  Okafor, COO, Zenith Group',
-    location: 'UK, London',
+    name: 'Emily Rodriguez',
+    location: 'Toronto, Canada',
     stars: 5,
-    text: `InspireEdge AI has revolutionized how we make decisions. It's like having a boardroom of experts—only smarter, faster, and aligned with our mission`,
+    text: `We use it every week in our planning meetings. It’s fast, reliable, and gives us exactly what we need to stay ahead.`,
   },
   {
-    name: 'Dr. Am Okafor, COO, Zenith Group',
-    location: 'UK, London',
+    name: 'Daniel Kim',
+    location: 'Seoul, South Korea',
     stars: 5,
-    text: `InspireEdge AI has revolutionized how we make decisions. It's like having a boardroom of experts—only smarter, faster, and aligned with our mission`,
+    text: `Honestly, I was skeptical at first, but this tool is incredible. It’s made my job so much easier and more effective.`,
   },
 ];
+
 export default function Testimonials() {
   const [startIndex, setStartIndex] = useState(0);
   const visibleTestimonials = 2;
