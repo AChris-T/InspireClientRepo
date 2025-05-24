@@ -62,6 +62,8 @@ export default function Blog() {
               <Image
                 src={post.thumbnail || defaultImage}
                 alt={post.title}
+                width={200}
+                height={200}
                 className="w-full h-48 object-cover rounded"
               />
               <h2 className="text-[18px] font-medium mb-2">{post.title}</h2>
