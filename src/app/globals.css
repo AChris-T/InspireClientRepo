@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 body {
   padding: 0;
@@ -14,7 +15,14 @@ body {
 @theme {
   --color-black-100: #050505;
   --color-gray-100: #0f0c1724;
+  --color-gray-200: #929191;
   --color-yellow-100: #dcfc36;
+  --color-yellow-200: #dcfc3633;
+  --color-lemon-100: #a9c711;
+  --color-red-100: #ff4d4f;
+}
+.manrope {
+  font-family: 'Manrope', sans-serif;
 }
 .sora {
   font-family: 'Sora', sans-serif;
@@ -66,4 +74,9 @@ body {
 
 .scrolling-track {
   animation: scroll-left 20s linear infinite;
+}
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  overflow: auto; /* or scroll */
 }

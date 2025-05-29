@@ -1,5 +1,10 @@
 import Navbar from '@/components/Home/Navbar';
 import './globals.css';
+import Providers from '@/components/Providers';
+
+export const viewport = {
+  themeColor: '#0f172a',
+};
 
 export const metadata = {
   title: 'InspireEdge AI - Smart eCommerce Growth & Cart Recovery',
@@ -74,7 +79,6 @@ export const metadata = {
       url: '/safari-pinned-tab.svg',
     },
   },
-  themeColor: '#0f172a',
   manifest: '/site.webmanifest',
   category: 'ecommerce',
 };
@@ -83,12 +87,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="bg-black-100 h-full text-white ">
-          <div className=" py-3 px-3 lg:px-[141px]">
-            <Navbar />
-          </div>
-          {children}
-        </div>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

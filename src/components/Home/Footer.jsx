@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <div className=" w-full  items-center py-2  flex justify-between">
         <h3 className="text-[#cac6dd] text-sm">
-          © identityhub 2024. All rights reserved
+          © InspireEdge 2024. All rights reserved
         </h3>
         <div className="flex justify-between gap-3 items-center">
           <Image src={twi} alt="" />
