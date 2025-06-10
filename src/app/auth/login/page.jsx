@@ -49,8 +49,7 @@ const LoginForm = () => {
           token: response.access,
         })
       );
-
-      router.push('/dashboard');
+      router.push('/auth/connect_store');
     } catch (error) {
       console.error('Login failed:', error);
       setErrorMessage(

@@ -9,8 +9,17 @@ import { RiLockPasswordLine } from 'react-icons/ri';
 import AlertIcon from '../../../../public/icons/AlertIcon';
 import GoogleIcon from '../../../../public/icons/GoogleIcon';
 import Link from 'next/link';
+import { useRegisterUserMutation } from '@/redux/authApi';
+import { useDispatch } from 'react-redux';
+import { loginSuccess } from '@/redux/authSlice';
+import { useRouter } from 'next/navigation';
+import { setAuthTokens } from '@/utils/auth';
 
-export default function signup() {
+export default function Signup() {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const [signup, { isLoading }] = useRegisterUserMutation();
+  const [errorMessage, setErrorMessage] = useState('');
   const {
     register,
     handleSubmit,
@@ -21,23 +30,27 @@ export default function signup() {
     password: false,
     confirmPassword: false,
   });
-
   const togglePasswordVisibility = (field) => {
     setPasswordVisibility((prev) => ({
       ...prev,
       [field]: !prev[field],
     }));
   };
-
   const handleVisibilityClick = (e, field) => {
     e.preventDefault();
     e.stopPropagation();
     togglePasswordVisibility(field);
   };
-
   const onSubmit = async (data) => {
-    console.log('Form Data:', data);
-    reset();
+    try {
+      const response = await signup(data).unwrap();
+      router.push(`/auth/verify-otp?email=${encodeURIComponent(data.email)}`);
+    } catch (error) {
+      console.error('Signup failed:', error);
+      setErrorMessage(
+        error?.data?.message || 'Signup failed. Please try again.'
+      );
+    }
   };
   return (
     <div className="manrope text-white  w-full flex flex-col gap-14">
@@ -133,7 +146,7 @@ export default function signup() {
             <div className="flex items-center gap-5 w-full">
               <RiLockPasswordLine color="#929191" className="text-xl" />
               <input
-                {...register('confirmPassword', {
+                {...register('password2', {
                   required: 'Please confirm your password',
                   validate: (value, formValues) =>
                     value === formValues.password || 'Passwords do not match',
@@ -165,12 +178,12 @@ export default function signup() {
           <label className="block text-sm">Business/store name</label>
           <div
             className={`${
-              errors.businessName ? 'border-red-100' : 'border-white'
+              errors.business_name ? 'border-red-100' : 'border-white'
             } flex items-center gap-5 border p-2 rounded-lg `}
           >
             <FaRegUser color="#929191" />
             <input
-              {...register('businessName', {
+              {...register('business_name', {
                 required: 'Business name is required',
               })}
               type="text"
@@ -184,8 +197,11 @@ export default function signup() {
             </p>
           )}
         </div>
-        <button className="bg-lemon-100 rounded-lg mt-10 w-full py-3 font-medium text-sm text-black">
-          Sign Up{' '}
+        <button
+          disabled={isLoading}
+          className="bg-lemon-100 rounded-lg mt-10 w-full py-3 font-medium text-sm text-black"
+        >
+          {isLoading ? 'Signing up...' : 'Sign Up'}
         </button>
         <div className="w-full flex items-center  gap-7">
           <div className="bg-[#E5E5E5] w-full h-[1px]"></div>

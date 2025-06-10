@@ -1,3 +1,3 @@
 export default function DashboardLayout({ children }) {
-  return <div>Hello</div>;
+  return <div className="flex flex-col">{children}</div>;
 }

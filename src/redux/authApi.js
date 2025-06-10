@@ -25,14 +25,35 @@ export const AuthApi = createApi({
     }),
     registerUser: builder.mutation({
       query: (body) => ({
-        url: '/student/signup/',
+        url: '/customauth/register',
+        method: 'POST',
+        body,
+      }),
+    }),
+    verifyOtp: builder.mutation({
+      query: (body) => ({
+        url: '/customauth/verify-otp',
+        method: 'POST',
+        body,
+      }),
+    }),
+    resendOtp: builder.mutation({
+      query: (body) => ({
+        url: '/customauth/resend-otp',
+        method: 'POST',
+        body,
+      }),
+    }),
+    forgetPassword: builder.mutation({
+      query: (body) => ({
+        url: '/customauth/forgot-password',
         method: 'POST',
         body,
       }),
     }),
     resetPassword: builder.mutation({
       query: (body) => ({
-        url: '/reset-password',
+        url: '/customauth/resend-otp',
         method: 'POST',
         body,
       }),
@@ -44,4 +65,7 @@ export const {
   useLoginMutation,
   useRegisterUserMutation,
   useResetPasswordMutation,
+  useVerifyOtpMutation,
+  useResendOtpMutation,
+  useForgetPasswordMutation,
 } = AuthApi;
