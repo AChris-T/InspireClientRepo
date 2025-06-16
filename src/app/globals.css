@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
   padding: 0;
@@ -14,11 +15,21 @@ body {
 
 @theme {
   --color-black-100: #050505;
+  --color-black-200: #3a3a3a;
+  --color-black-300: #474747;
   --color-gray-100: #0f0c1724;
   --color-gray-200: #929191;
+  --color-gray-300: #f1f1f1;
+  --color-gray-400: #edf2f7;
+  --color-gray-500: #e5e5e5;
+  --color-green-100: #50c878;
   --color-yellow-100: #dcfc36;
   --color-yellow-200: #dcfc3633;
+  --color-red-100: #ff4d4f;
   --color-lemon-100: #a9c711;
+  --color-lemon-200: #dcfc36;
+  --color-lemon-300: #70fa29;
+  --color-lemon-400: #f5de8c;
   --color-red-100: #ff4d4f;
 }
 .manrope {
@@ -26,6 +37,9 @@ body {
 }
 .sora {
   font-family: 'Sora', sans-serif;
+}
+.inter {
+  font-family: 'Inter', sans-serif;
 }
 .space {
   font-family: 'Space Grotesk', sans-serif;
@@ -79,4 +93,7 @@ body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   overflow: auto; /* or scroll */
+}
+.chartbox {
+  box-shadow: 0px 1.53px 19.1px 0px #00000014;
 }

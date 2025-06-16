@@ -23,8 +23,8 @@ export default function Home() {
         <Introduction />
         <Solutions />
         <Benefits />
-        <Pricing />
-        <Blog />
+       {/*  <Pricing />
+        <Blog /> */}
         <Testimonials />
         <FAQ />
         <Start />
