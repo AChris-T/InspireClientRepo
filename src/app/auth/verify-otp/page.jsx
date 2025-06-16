@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useVerifyOtpMutation, useResendOtpMutation } from '@/redux/authApi';
 import AlertIcon from '../../../../public/icons/AlertIcon';
@@ -217,5 +217,8 @@ const OtpVerification = () => {
 };
 
 export default function VerifyOtpPage() {
-  return <OtpVerification />;
+  return;
+  <Suspense fallback={<div>Loading...</div>}>
+    <OtpVerification />;
+  </Suspense>;
 }
