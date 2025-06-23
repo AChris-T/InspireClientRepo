@@ -9,6 +9,7 @@ export default function SmallCards({
   backgroundColor,
   price,
   topic,
+  show,
   percentage,
 }) {
   return (
@@ -19,13 +20,21 @@ export default function SmallCards({
         <h3 className={`${textColor}`}>{topic}</h3>
         <h3 className="text-3xl font-medium ">{price}</h3>
         <div className="mt-3 text-xs flex items-center gap-2">
-          {status ? <ArrowDown /> : <ArrowUp />}
-          <h3 className=" flex gap-1">
-            <span className={`${status ? 'text-red-100' : 'text-green-100'}  `}>
-              -2.1%
-            </span>
-            Since last week
-          </h3>
+          {show ? (
+            <>
+              {status ? <ArrowDown /> : <ArrowUp />}
+              <h3 className=" flex gap-1">
+                <span
+                  className={`${status ? 'text-red-100' : 'text-green-100'}  `}
+                >
+                  -2.1
+                </span>
+                Since last week
+              </h3>
+            </>
+          ) : (
+            ''
+          )}
         </div>
       </div>
       {icon}

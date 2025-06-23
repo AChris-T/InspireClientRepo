@@ -20,7 +20,11 @@ const navItems = [
     path: '/dashboard/market-overview',
     icon: <MarketIcon />,
   },
-  { name: "Competitor's Insight", path: '/insight', icon: <CustomerIcon /> },
+  {
+    name: "Competitor's Insight",
+    path: '/dashboard/customers-insight',
+    icon: <CustomerIcon />,
+  },
   { name: "Customer's Pulse", path: '/pulse', icon: <CustomerImpulseIcon /> },
   { name: 'Command Edge', path: '/command', icon: <CommandEdgeIcon /> },
   { name: 'Integration', path: '/integration', icon: <IntegrationIcon /> },

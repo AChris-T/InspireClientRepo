@@ -11,8 +11,7 @@ const CardData = [
     textColor: 'text-black-100',
     bgColor: 'bg-lemon-200',
     icon: <Graph />,
-    topic: 'Sales Velocity',
-    percentage: '28%',
+    topic: 'Active Threats',
     price: '28%',
   },
   {
@@ -20,7 +19,7 @@ const CardData = [
     textColor: 'text-white',
     bgColor: 'bg-black-200',
     icon: <HandClick />,
-    topic: 'Click-through Rate',
+    topic: 'Competitor’s Actions',
     percentage: '28%',
     price: '700',
   },
@@ -29,15 +28,15 @@ const CardData = [
     textColor: 'text-black-100',
     bgColor: 'bg-lemon-400',
     icon: <WarningIcon />,
-    topic: 'Stock-out risk level',
+    topic: 'Response Rate',
     percentage: '28%',
     price: '$ 7000',
   },
 ];
 
-export default function Marketcards() {
+export default function CustomerCards() {
   const [status, setStatus] = useState(false);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   return (
     <div className="flex w-full flex-col md:flex-row gap-5">

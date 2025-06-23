@@ -43,6 +43,8 @@ const CardData = [
 
 export default function Dashboard() {
   const [status, setStatus] = useState(false);
+  const [show, setShow] = useState(true);
+
   const originalPrice = 20000;
   const price = 3000;
 
@@ -73,6 +75,7 @@ export default function Dashboard() {
             price={item.price}
             topic={item.topic}
             percentage={item.percentage}
+            show={show}
           />
         ))}
       </div>
