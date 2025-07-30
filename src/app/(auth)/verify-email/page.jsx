@@ -1,5 +1,7 @@
+// app/(auth)/verify-email/page.tsx
 'use client';
-import React from 'react';
+
+import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import EmailVerification from '@/components/auth/EmailVerification';
 
@@ -11,7 +13,7 @@ function InvalidMessage() {
   );
 }
 
-export default function page() {
+function EmailVerificationPage() {
   const searchParams = useSearchParams();
   const email = searchParams.get('email');
   const token = searchParams.get('token');
@@ -21,4 +23,12 @@ export default function page() {
   }
 
   return <EmailVerification email={email} token={token} />;
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
+      <EmailVerificationPage />
+    </Suspense>
+  );
 }
