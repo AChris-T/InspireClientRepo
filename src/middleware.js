@@ -1,16 +1,15 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
-  const accessToken = request.cookies.get('access_token');
-  const refreshToken = request.cookies.get('refresh_token');
+  const inspireToken = request.cookies.get('Inspire-token');
 
   if (request.nextUrl.pathname.startsWith('/dashboard')) {
-    if (!accessToken || !refreshToken) {
-      return NextResponse.redirect(new URL('/auth/login', request.url));
+    if (!inspireToken) {
+      return NextResponse.redirect(new URL('/login', request.url));
     }
   }
-  if (request.nextUrl.pathname.startsWith('/auth')) {
-    if (accessToken && refreshToken) {
+  if (request.nextUrl.pathname.startsWith('/login')) {
+    if (inspireToken) {
       return NextResponse.redirect(new URL('/dashboard', request.url));
     }
   }
@@ -19,5 +18,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/auth/:path*'],
+  matcher: ['/dashboard/:path*', '/login'],
 };

@@ -7,7 +7,7 @@ export const DashboardApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: API_BASE_URL,
     prepareHeaders: (headers) => {
-      const token = Cookies.get('access_token');
+      const token = Cookies.get('Inspire-token');
       console.log(token);
       if (token) {
         headers.set('Authorization', `Bearer ${token}`);
@@ -17,8 +17,8 @@ export const DashboardApi = createApi({
   }),
   endpoints: (builder) => ({
     connectShopify: builder.query({
-      query: () => ({
-        url: '/shopify/auth?shop=stationeries-stores.myshopify.com',
+      query: (store) => ({
+        url: `/store/shopify/connect?shop=${store}`,
         method: 'GET',
       }),
     }),

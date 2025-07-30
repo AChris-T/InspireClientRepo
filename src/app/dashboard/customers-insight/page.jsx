@@ -1,13 +1,14 @@
-'use client';
 import SmallCards from '@/components/cards/SmallCards';
 import Header from '@/components/Dashboard/Header';
-import React, { useState } from 'react';
+import React from 'react';
 import ProductTable from '@/components/Dashboard/ProductTable';
 import SmartAlert from '@/components/Dashboard/SmartAlert';
 import DownloadIcon from '../../../../public/icons/DownloadIcon';
 import CustomerCards from '@/components/Dashboard/CustomerCards';
 import CustomerTable from '@/components/Dashboard/CustomerTable';
 import StrikeDetection from '@/components/Dashboard/StrikeDetection';
+import MarketRader from '@/components/Dashboard/MarketRader';
+import YourEdge from '@/components/Dashboard/YourEdge';
 
 export default function page() {
   return (
@@ -23,8 +24,8 @@ export default function page() {
       </div>
       <CustomerCards />
       <CustomerTable />
-      <StrikeDetection />
-      <SmartAlert />
+      <MarketRader />
+      <YourEdge />
     </div>
   );
 }

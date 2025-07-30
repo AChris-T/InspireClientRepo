@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -25,8 +24,16 @@ const navItems = [
     path: '/dashboard/customers-insight',
     icon: <CustomerIcon />,
   },
-  { name: "Customer's Pulse", path: '/pulse', icon: <CustomerImpulseIcon /> },
-  { name: 'Command Edge', path: '/command', icon: <CommandEdgeIcon /> },
+  {
+    name: "Customer's Pulse",
+    path: '/dashboard/customers-pulse',
+    icon: <CustomerImpulseIcon />,
+  },
+  {
+    name: 'Command Edge',
+    path: '/dashboard/customers-edge',
+    icon: <CommandEdgeIcon />,
+  },
   { name: 'Integration', path: '/integration', icon: <IntegrationIcon /> },
   { name: 'Teams and Roles', path: '/teams', icon: <UserIcon /> },
   { name: 'Settings', path: '/settings', icon: <SettingsIcon /> },

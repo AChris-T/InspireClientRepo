@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
+import ContentCards from '../cards/ContentCards';
 
 const data = [
   {
@@ -40,55 +41,40 @@ const getThreatColor = (level) => {
       return '';
   }
 };
-export default function CustomerTable() {
-  const [selected, setSelected] = useState([]);
-
-  const toggleSelectAll = () => {
-    if (selected.length === data.length) {
-      setSelected([]);
-    } else {
-      setSelected(data.map((_, i) => i));
-    }
-  };
-
-  const toggleRow = (index) => {
-    setSelected((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
-  };
+export default function FrictionPoints() {
   return (
-    <div className="manrope">
+    <div className="manrope flex flex-col gap-4 w-full max-w-full">
       <h3 className="text-black-100 font-medium text-xl">
-        Product Performance
+        Friction Points
       </h3>
-      <div className="overflow-x-auto mt-5 ">
         <table className="min-w-full border rounded-md border-[#F1F1F1] divide-y divide-[#F1F1F1]">
           <thead className="bg-[#F9F9F9] rounded-md">
             <tr className="rounded-md h-[56px]  ">
               <th className="p-5 text-left text-sm font-medium text-black-200">
-                Competitor
+                Issue
               </th>
               <th className="p-3 text-left text-sm font-medium text-black-200">
-                Recent Price Changes
+                Location
+              </th>
+              <th className="p-3 text-left text-sm font-medium text-black-200">
+                Frequency
               </th>
               <th className="p-3 text-left text-sm font-medium text-black-200">
                 Threat Score
               </th>
               <th className="p-3 text-left text-sm font-medium text-black-200">
-                New Campaign Detected
+                Action
               </th>
             </tr>
           </thead>
           <tbody className="divide-y-1 divide-[#F1F1F1]  bg-white">
             {data.map((item, idx) => (
-              <tr
-                key={idx}
-                className={`hover:bg-gray-50 transition ${
-                  selected.includes(idx) ? 'bg-blue-50' : ''
-                }`}
-              >
+              <tr key={idx} className="bg-white transition">
                 <td className="p-5 font-medium text-black-300">{item.sku}</td>
-                <td className="p-5 font-medium text-black-300">{item.price}</td>
+                <td className="p-5 font-medium text-black-300">
+                  Checkout page
+                </td>
+                <td className="p-5 font-medium text-black-300">45%</td>
                 <td className="p-5 font-medium text-black-300">
                   <span
                     className={`px-10 py-3 rounded-full text-sm font-medium ${getThreatColor(
@@ -99,13 +85,14 @@ export default function CustomerTable() {
                   </span>
                 </td>
                 <td className="p-5 font-medium text-black-200">
-                  {item.suggestedAction}
+                  <button className="px-10 py-2 rounded-lg border-[1px] border-lemon-100">
+                    Action
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
     </div>
   );
 }

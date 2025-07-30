@@ -97,3 +97,18 @@ body {
 .chartbox {
   box-shadow: 0px 1.53px 19.1px 0px #00000014;
 }
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.4s ease;
+}

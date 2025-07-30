@@ -1,7 +1,7 @@
 'use client';
 import SmallCards from '@/components/cards/SmallCards';
 import Header from '@/components/Dashboard/Header';
-import React, { useState } from 'react';
+import React from 'react';
 import MarketOverview from '@/components/Dashboard/MarketOverview';
 import ProductTable from '@/components/Dashboard/ProductTable';
 import Marketcards from '@/components/Dashboard/Marketcards';
