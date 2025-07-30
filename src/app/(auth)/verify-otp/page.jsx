@@ -1,5 +1,7 @@
+// app/(auth)/verify-otp/page.tsx
 'use client';
-import React from 'react';
+
+import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import VerificationOTP from '@/components/auth/VerificationOTP';
 
@@ -11,7 +13,7 @@ function InvalidMessage() {
   );
 }
 
-export default function page() {
+function OTPPage() {
   const searchParams = useSearchParams();
   const email = searchParams.get('email');
 
@@ -20,4 +22,12 @@ export default function page() {
   }
 
   return <VerificationOTP email={email} />;
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
+      <OTPPage />
+    </Suspense>
+  );
 }
