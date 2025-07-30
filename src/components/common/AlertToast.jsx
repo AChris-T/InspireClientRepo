@@ -1,4 +1,4 @@
-import WarningIcon, { ErrorIcon, InfoIcon, SuccessIcon } from '@/assets/Icons';
+import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from '@/assets/Icons';
 import React, { useEffect, useState } from 'react';
 
 const typeStyles = {
